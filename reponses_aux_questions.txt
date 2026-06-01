@@ -1,3 +1,8 @@
+Question
+
+En utilisant votre meilleur outil, votre imagination, décrivez et illustrez comment cela pourrait être réalisé, sans rentrer dans les détails JAVA, que vous n'allez pas tarder à mettre en œuvre.
+
+
 Questions :
 
 1. Tester le programme en modifiant ses paramètres (sur la ligne de commande).
