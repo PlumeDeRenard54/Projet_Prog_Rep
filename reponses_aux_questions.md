@@ -1,3 +1,11 @@
+# Features
+
+    - Gestion de Crash
+    - Découpe de l'image
+    - Server d'adresses
+    - Noeud compute
+    - 
+
 # Questions
 
 En utilisant votre meilleur outil, votre imagination, décrivez et illustrez comment cela pourrait être réalisé, sans rentrer dans les détails JAVA, que vous n'allez pas tarder à mettre en œuvre.
