@@ -1,3 +1,13 @@
-public class ServeurCalcul {
-    
+public class ServeurCalcul implements ServiceServeur {
+
+    private List<ServiceNoeudCalcul> noeuds;
+
+    public boolean enregistrerNoeudCalcul(ServiceNoeudCalcul serv) {
+        noeuds.add(serv);
+    }
+
+    public List<ServiceNoeudCalcul> getAllNoeuds() {
+        return noeuds;
+    }
+
 }
