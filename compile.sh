@@ -3,6 +3,8 @@ echo "Compiled!";
 
 if [[ $1 == "Compute" ]]; then
     java -cp out/ LancerRaytracer simplerer.txt;
+elif [[ $1 == "help" ]]; then
+    echo -e "Help : \n  Noeud [host] [nbrDeNoeud]\n  Compute\n  Server\n  Client"
 elif [[ $1 == "Noeud" ]]; then
 
     # Récuperation des données en arguments
