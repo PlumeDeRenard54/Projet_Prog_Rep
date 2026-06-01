@@ -32,7 +32,7 @@
 
 >-
 
-### Le/les processus fixes (ceux qui écoutent sur un port choisi) et les processus mobiles ? (ceux qui rentrent et sortent a leur guise) ?
+- #### Le/les processus fixes (ceux qui écoutent sur un port choisi) et les processus mobiles ? (ceux qui rentrent et sortent a leur guise) ?
 
 >-
 
@@ -40,7 +40,7 @@
 
 >-
 
-### Si on veux que les calculs se fassent en parallèle que faut-il faire ?
+#### Si on veux que les calculs se fassent en parallèle que faut-il faire ?
 
 >-
 
