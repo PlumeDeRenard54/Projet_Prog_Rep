@@ -31,6 +31,7 @@
 
 ### En ne modifiant que le fichier LancerRaytracer.java, reproduire l'image suivante :
 
+> Afin de créer cette oeuvre d'art, nous avons modifié les coordonnées du point de départ de la méthode compute (x0 et y0) et la largeur/hauteur de la zone calculée.
 > ![alt text](img/img_2_quarts.png)
 
 ## Questions :
@@ -39,12 +40,12 @@
 
 >- 
 
-- #### Le/les processus fixes (ceux qui écoutent sur un port choisi) et les processus mobiles ? (ceux qui rentrent et sortent a leur guise) ?
+#### Le/les processus fixes (ceux qui écoutent sur un port choisi) et les processus mobiles ? (ceux qui rentrent et sortent a leur guise) ?
 
 > | Processus | Description |
 > | ----------- | ----------- |
 > | Client | Mobile |
-> | Server | Fixe|
+> | Server | Fixe |
 > |Noeud | Fixe |
 
 #### Les types des données échangées entre les processus  
