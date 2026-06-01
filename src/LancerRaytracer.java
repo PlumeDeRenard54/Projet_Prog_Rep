@@ -41,25 +41,22 @@ public class LancerRaytracer {
         // - x0 et y0 : correspondant au coin haut à gauche
         // - l et h : hauteur et largeur de l'image calculée
         // Ici on calcule toute l'image (0,0) -> (largeur, hauteur)
-        int x0 = 256, y0 = 256;
-        int l = 16, h = 16;
+        int x0 = 0, y0 = 0;
+        int l = largeur, h = hauteur;
 
         // Chronométrage du temps de calcul
         Instant debut = Instant.now();
         System.out.println("Calcul de l'image :\n - Coordonnées : " + x0 + "," + y0
                 + "\n - Taille " + largeur + "x" + hauteur);
-        //méthode de calcul
         Image image = scene.compute(x0, y0, l, h);
         Instant fin = Instant.now();
 
         long duree = Duration.between(debut, fin).toMillis();
 
-        System.out.println("Image calculée en :" + duree + " ms");
+        System.out.println("Image calculée en :"+duree+" ms");
 
         // Affichage de l'image calculée
         disp.setImage(image, x0, y0);
 
-        Image image2 = scene.compute(x0 - 256, y0 - 256, l, h);
-        disp.setImage(image2, x0 - 256, y0 - 256);
     }
 }
