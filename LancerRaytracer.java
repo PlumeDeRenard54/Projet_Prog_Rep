@@ -18,7 +18,7 @@ public class LancerRaytracer {
         int largeur = 512, hauteur = 512;
         
         if(args.length > 0){
-            fichier_description = "../data/" + args[0];
+            fichier_description = "./data/" + args[0];
             if(args.length > 1){
                 largeur = Integer.parseInt(args[1]);
                 if(args.length > 2)
