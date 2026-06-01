@@ -1,0 +1,1 @@
+javac src/*/*.java  -d out && java -cp out/ LancerRaytracer simplerer.txt
