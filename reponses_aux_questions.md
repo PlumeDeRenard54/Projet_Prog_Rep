@@ -1,3 +1,11 @@
+# Features
+
+    - Gestion de Crash
+    - Découpe de l'image
+    - Server d'adresses
+    - Noeud compute
+    - 
+
 # Questions
 
 ### En utilisant votre meilleur outil, votre imagination, décrivez et illustrez comment cela pourrait être réalisé, sans rentrer dans les détails JAVA, que vous n'allez pas tarder à mettre en œuvre.
@@ -24,7 +32,7 @@
 
 >-
 
-### Le/les processus fixes (ceux qui écoutent sur un port choisi) et les processus mobiles ? (ceux qui rentrent et sortent a leur guise) ?
+- #### Le/les processus fixes (ceux qui écoutent sur un port choisi) et les processus mobiles ? (ceux qui rentrent et sortent a leur guise) ?
 
 >-
 
@@ -32,7 +40,7 @@
 
 >-
 
-### Si on veux que les calculs se fassent en parallèle que faut-il faire ?
+#### Si on veux que les calculs se fassent en parallèle que faut-il faire ?
 
 >-
 
