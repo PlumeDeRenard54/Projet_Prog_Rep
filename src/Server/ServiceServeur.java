@@ -1,7 +1,10 @@
+package src.Server;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.util.List;
+
+import src.Noeud.ServiceNoeudCalcul;
 
 public interface ServiceServeur extends Remote {
 

@@ -1,5 +1,7 @@
+package src.Noeud;
 import java.rmi.Remote;
-import raytracer.Image;
+
+import src.raytracer.Image;
 
 public interface ServiceNoeudCalcul extends Remote {
 
