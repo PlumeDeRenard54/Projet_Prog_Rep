@@ -2,7 +2,6 @@ package src;
 
 import java.time.Duration;
 import java.time.Instant;
-
 import src.raytracer.Disp;
 import src.raytracer.Image;
 import src.raytracer.Scene;
@@ -41,8 +40,8 @@ public class LancerRaytracer {
         // - x0 et y0 : correspondant au coin haut à gauche
         // - l et h : hauteur et largeur de l'image calculée
         // Ici on calcule toute l'image (0,0) -> (largeur, hauteur)
-        int x0 = 0, y0 = 0;
-        int l = largeur, h = hauteur;
+        int x0 = 256, y0 = 256;
+        int l = largeur - 256, h = hauteur - 256;
 
         // Chronométrage du temps de calcul
         Instant debut = Instant.now();
@@ -58,5 +57,9 @@ public class LancerRaytracer {
         // Affichage de l'image calculée
         disp.setImage(image, x0, y0);
 
+        Image image2 = scene.compute(0, 0 , l, h);
+        disp.setImage(image2, 0, 0);
+
+        disp.setImage(image, x0, y0);
     }
 }
