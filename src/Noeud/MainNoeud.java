@@ -15,7 +15,7 @@ public class MainNoeud {
 
         ServiceNoeudCalcul noeud = (ServiceNoeudCalcul) UnicastRemoteObject.exportObject(new Noeud(),0);
 
-        Registry reg = LocateRegistry.getRegistry(args[1],1099);
+        Registry reg = LocateRegistry.getRegistry(args[0],1099);
         ((ServiceServeur) reg.lookup("ServeurCalcul")).enregistrerNoeudCalcul(noeud);
 
     }
