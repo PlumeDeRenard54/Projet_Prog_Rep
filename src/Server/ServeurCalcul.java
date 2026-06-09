@@ -13,11 +13,12 @@ public class ServeurCalcul implements ServiceServeur {
 
     @Override
     public List<ServiceNoeudCalcul> getAllNoeuds() throws RemoteException {
-        for (ServiceNoeudCalcul n: noeuds) {
+        for (int i = 0; i < noeuds.size(); i++) {
             try {
-                boolean res = n.isFree();
+                boolean res = noeuds.get(i).isFree();
             } catch(Exception e) {
-                noeuds.remove(n);
+                noeuds.remove(noeuds.get(i));
+                i--;
             }
         }
         return noeuds;
