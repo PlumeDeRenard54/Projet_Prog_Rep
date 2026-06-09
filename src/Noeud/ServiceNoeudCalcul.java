@@ -9,4 +9,5 @@ public interface ServiceNoeudCalcul extends Remote {
 
     public Image calculer(Scene s,int x0, int y0, int largeur, int hauteur) throws RemoteException;
 
+    public boolean isFree() throws RemoteException;
 }

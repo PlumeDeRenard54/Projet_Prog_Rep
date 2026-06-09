@@ -32,33 +32,46 @@ public class Client {
         Scene scene = new Scene(image, sizeX, sizeY);
         ServiceServeur serv = getServeurDistant();
         List<ServiceNoeudCalcul> noeuds = serv.getAllNoeuds();
-        Decoupe decoupe = new Decoupe(sizeX, sizeY, noeuds.size());
+        List<Integer[]> decoupe = new Decoupe(sizeX, sizeY, noeuds.size()).getDecoupe();
         int ind = 0;
 
-        for (ServiceNoeudCalcul noeud : noeuds){
-            int finalInd = ind;
-            Thread t = new Thread(){
-                @Override
-                public void run(){
-                    Integer[] d = decoupe.getDecoupe().get(finalInd);
-                    int debX = d[0];
-                    int debY = d[1];
-                    int largeur = d[2];
-                    int hauteur = d[3];
+        for (Integer[] parcelle : decoupe){
+            
+            int debX = parcelle[0];
+            int debY = parcelle[1];
+            int largeur = parcelle[2];
+            int hauteur = parcelle[3];
 
+            ServiceNoeudCalcul currentNode = noeuds.get(0);
+            int index = 0;
 
-                    try {
-
-                        Image i = noeud.calculer(scene, debX, debY, largeur, hauteur);
-                        disp.setImage(i, debX, debY);
-
-                    } catch (RemoteException e) {
-                        throw new RuntimeException(e);
+            while (noeuds.size()>0) {
+                try {
+                    if (currentNode.isFree()){
+                        break;
+                    }else{
+                        index = (index+1)%noeuds.size();
+                        currentNode = noeuds.get(index);
                     }
+
+                } catch (Exception e) {
+                    noeuds.remove(currentNode);
                 }
-            };
-            t.start();
-            ind++;
+            }
+
+            final ServiceNoeudCalcul finalNode = currentNode; 
+            new Thread(()->{
+                try {
+                    Image i = finalNode.calculer(scene, debX, debY, largeur, hauteur);
+                    disp.setImage(i, debX, debY);
+                } catch (Exception e) {
+                    System.out.println(e.getMessage());
+                }
+            }).start();
+
+
+            
+        
         }
     }
 
