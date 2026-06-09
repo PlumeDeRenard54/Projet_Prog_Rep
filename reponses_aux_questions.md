@@ -62,4 +62,4 @@
 
 ### Lancez-vous et réalisez cette application répartie ! Vérifiez que le calcul est bien accéléré.
 
->- 
+En refaisant les calculs, avec des résolutions de 1000*1000 à 2000*2000 par palier de 200 (1200*1200, 1400*1400, ...) on obtient les résultats suivants

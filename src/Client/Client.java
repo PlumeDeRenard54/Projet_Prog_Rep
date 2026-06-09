@@ -42,7 +42,7 @@ public class Client {
             int largeur = parcelle[2];
             int hauteur = parcelle[3];
 
-            ServiceNoeudCalcul currentNode = noeuds.get(0);
+            ServiceNoeudCalcul currentNode = noeuds.get(ind);
             int index = 0;
 
             while (noeuds.size()>0) {
@@ -69,8 +69,7 @@ public class Client {
                 }
             }).start();
 
-
-            
+            ind++;
         
         }
     }
