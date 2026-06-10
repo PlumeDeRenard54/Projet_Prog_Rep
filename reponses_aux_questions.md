@@ -119,7 +119,7 @@ Résolution 1000 * 1000 : 3 sec
 
 Globalement, on remarque que les temps d'exécution sont beaucoup plus faibles qu'avant, ce qui est normal grâce aux threads.
 
-## Explication de la démonstration 1
+## Explication de la démonstration 1 et 2 (nommée 3)
 
 >Dans la démonstration, vous appercevez 4 terminals (terminaux) : 
 >   - Haut à gauche : création de 5 noeuds en local
@@ -129,3 +129,5 @@ Globalement, on remarque que les temps d'exécution sont beaucoup plus faibles q
 > 
 > Nous créons donc 5 noeuds locaux, sachant que 5 autres noeuds ont été créés sur une autre machine afin d'utiliser les performances d'une autre machine que le client (but du projet).
 > Nous lançons ensuite le client qui va demander l'affichage d'une image en 500 * 500 (paramètre modifiable dans le compile.sh).
+
+> Dans le démonstration suivante, (Test3.webm) nous lançons une image beaucoup plus grande pour avoir le tmeps de tuer un noeud de calcul (fenêtre en bas à droite Ctrl+C qu'on remarque très brievement) et la photo reste quand même complète sans problème.
